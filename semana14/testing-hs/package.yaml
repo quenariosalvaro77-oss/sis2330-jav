@@ -1,0 +1,31 @@
+name: testing-hs
+version: 0.1.0.0
+dependencies:
+- base >= 4.14 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+    - containers
+    - mtl
+  exposed-modules:
+    - Notas
+    - Historial
+
+executables:
+  testing-hs-exe:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+    - testing-hs
+    - containers
+    - mtl
+
+tests:
+  testing-hs-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - testing-hs
+    - HUnit
+    - QuickCheck
