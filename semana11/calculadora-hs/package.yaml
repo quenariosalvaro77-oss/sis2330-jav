@@ -1,0 +1,21 @@
+name: calculadora-hs
+version: 0.1.0.0
+dependencies:
+- base >= 4.14 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  calculadora-hs-exe:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+    - calculadora-hs
+
+tests:
+  calculadora-hs-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - calculadora-hs
